@@ -71,7 +71,7 @@ h5{
 small{
     font-size: 0.75rem;
 }
-.profile-{
+.profile-photo img{
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
@@ -147,7 +147,7 @@ aside .sidebar a{
     height: 3.2rem;
     transition: all 1s ease-in;
 
-}n
+} 
 
 aside .sidebar a span{
     font-size: 1.6rem;
@@ -301,17 +301,19 @@ main .insights svg circle{
 }
 
 main .insights .sales svg circle{
-  stroke-dashoffset: 10;
-  stroke-dasharray: 150;
+  stroke-dashoffset: 20;
+  stroke-dasharray: 160;
 }
 
 main .insights .expenses svg circle{
-  stroke-dashoffset: 0;
-  stroke-dasharray: 150;
+  stroke-dashoffset: 20;
+  stroke-dasharray: 160;
 }
 
 main .insights .income svg circle{
   stroke: var(--clr-success);
+  stroke-dashoffset: 20;
+  stroke-dasharray: 160;
 }
 
 main .insights .progress .number{
@@ -341,7 +343,7 @@ main .recent_order table {
   text-align: center;
   box-shadow: var(--box-shadow);
   transition: all .3s ease;
-  color: var(--clr-danger);
+  color: var(--clr-dark);
 }
 
 main .recent_order table:hover{
@@ -370,7 +372,9 @@ main .recent_order a{
   margin: 1rem;
 }
 
-
+.message{
+  font-size: 15px;
+}
 
 /* 
 start right side style
@@ -392,13 +396,143 @@ start right side style
   display: none;
 
 }
-.right .theme-toggler span{
+.right .theme-toggler{
 
+  background-color: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  height: 1.6rem;
+  width:4.2 rem;
+  cursor: pointer;
+  border-radius: var(--border-radius-1);
+}
+
+.right .theme-toggler span{
   font-size: 1.2rem;
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: centre;
+  justify-content: center;
+
+  
 }
+.profile{
+  margin-left: -10%;
+}
+
+.right .theme-toggler span.active{
+
+  background-color: var(--clr-primary);
+  color: #fff;
+}
+
+.right .top .profile{
+  display:flex;
+  gap:0.1rem;
+  text-align: center;
+  
+
+}
+
+.right .info h3{
+
+  color: var(--clr-dark);
+}
+
+.right .item h3{
+
+  color: var(--clr-dark);
+}
+
+/*recent updates*/
+
+.right .recent_updates{
+  margin-top: 1rem;
+  margin-left: -20px;
+}
+
+.right .recent_updates .updates{
+
+  background-color: var(--clr-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+}
+
+.right .recent_updates .updates:hover{
+  box-shadow: none;
+}
+.right .recent_updates .update{
+  display: grid;
+  grid-template-columns: 2.6rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+/* Sales analytics*/
+
+.right .sales_analytics{
+  margin-top: 2rem;
+  margin-left: -20px;
+}
+
+.right .sales_analytics .item{
+  background-color: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1;
+  margin: 10px ;
+  width: 80%;
+  margin-bottom: 0.8rem;
+  padding: 1.4rem var(--card-padding);
+  border-radius:var(--border-radius-3) ;
+  box-shadow: var(--box-shadow);
+  margin-left: -5px;
+}
+
+.right .sales_analytics .item:hover{
+  box-shadow: none;
+}
+
+.right .sales_analytics .item .icon{
+  background: coral;
+  padding-bottom: -2px;
+  color: var(--clr-white);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  align-items: center;
+}
+
+.right .sales_analytics .item:nth-child(3) .icon{
+  background-color: var(--clr-success);
+  text-align: center;
+}
+.right .sales_analytics .item:nth-child(4) .icon{
+  background-color: var(--clr-danger);
+}
+
+.add_products{
+  display: flex;
+  height: 60px;
+  width: 100px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed;
+  color: var(--clr-dark-variant);
+  margin-bottom: 40px;
+
+}
+
+
+
+
+
+
 
