@@ -32,6 +32,8 @@ body {
   --box-shadow: 0 2rem 3rem var(--clr-light);
 }
 
+
+
 *{
   margin: 0;
   padding: 0;
@@ -40,6 +42,16 @@ body {
   box-sizing: none;
   list-style: none;
   appearance: none;
+}
+
+/*dark theme*/
+.dark-theme-variables {
+  --clr-color-background: #181a1e;
+  --clr-white: #202528;
+  --clr-light: rgba(0, 0, 0, 0.4);
+  --clr-dark: #edeffd;
+  --clr-dark-variant: #677483;
+  --box-shadow: 0 2rem 3rem var(--clr-light)
 }
 
 .container {
@@ -103,6 +115,7 @@ small{
 
 aside{
   height: 100vh;
+  
 }
 
 aside .top{
@@ -117,9 +130,7 @@ aside .logo{
   gap: 1rem;
 }
 
-aside .top div.close{
-    display: none;
-}
+
 
 /************************
 Sidebar
@@ -215,6 +226,22 @@ main .date{
   margin-top: 1rem;
   padding:0.5rem 1.6rem;
 
+}
+
+.material-symbols-outlined {
+  padding: 13px;
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
 }
 
 main .insights{
@@ -527,6 +554,132 @@ start right side style
   border: 2px dashed;
   color: var(--clr-dark-variant);
   margin-bottom: 40px;
+
+}
+
+/*MEdia query*/
+
+@media screen and (max-width:1200px) {
+.container{
+  width:94%;
+  grid-template-columns: 7rem auto 14rem;
+}
+
+aside .sidebar h3{
+  display: none;
+}
+
+aside .sidebar:last-child{
+  position: relative;
+  margin-top: 1.8rem;
+}
+
+main .insights{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+  
+}
+
+
+/***********************
+Media query for phone */
+@media screen and (max-width:768px) {
+  .container{
+    width: 100%;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  aside{
+    position: fixed;
+    width: 18rem;
+    z-index: 3;
+    background: var(--clr-white);
+    display: none;
+    left: -100px;
+    animation: menuAni 1s forwards;
+    
+  }
+
+  @keyframes menuAni {
+    to{
+      left:0;
+    }
+    
+  }
+
+  aside .logo h2{
+    display: inlne;
+  }
+
+  aside .sidebar h3{
+    display: inline;
+  }
+  aside .sidebar a{
+    width: 100%;
+    height: 3.4rem;
+
+  }
+
+  aside .top div.close span{
+    display: inline;
+    position: absolute;
+    right: 0; 
+    margin-right: 30px;
+    font-size: 35px;
+}
+
+.right .top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.8rem;
+  background: var(--clr-white);
+  width: 100%;
+  height: 4.6rem;
+  z-index: 2;
+  box-shadow: 0 1rem 1rem var(--box-shadow);
+  margin: 0;
+}
+
+main .insights{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 1.6rem;
+  padding: 40px;
+}
+
+main .recent_order{
+  padding: 30px;
+  margin: 0 auto;
+
+}
+.right .profile{
+  position: absolute;
+  left: 70%;
+}
+
+.right .recent_updates{
+  padding: 30px;
+}
+.right .sales_analytics{
+  padding: 30px;
+}
+.add_products{
+  padding: 30px;
+}
+
+.right .top button{
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: var(--clr-dark);
+    position: absolute;
+    left: 1rem;
+}
 
 }
 
